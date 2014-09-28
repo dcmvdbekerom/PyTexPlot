@@ -2,7 +2,7 @@ PyTexPlot
 =========
 By Dirk van den Bekerom
 
-This package allows one to include plots in LaTeX by generating them with python files.
+This package allows one to include plots in LaTeX by generating them with Python files.
 
 Installation
 ============
