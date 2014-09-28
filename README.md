@@ -1,7 +1,6 @@
 PyTexPlot
 =========
-2014-09-28 - By Dirk van den Bekerom
-FOM Institute DIFFER - www.differ.nl
+2014-09-28 - By Dirk van den Bekerom (FOM Institute DIFFER - www.differ.nl)
 
 This package allows one to include plots in LaTeX by generating them with Python files.
 
