@@ -31,6 +31,8 @@ except:
 
 fpy = open(filepath,'r')
 buf = fpy.read()
+fpy.close()
+
 crc = binascii.crc32(buf.encode())
 print('Pytexplot: CRC32 = '+str(crc))
 
@@ -47,7 +49,5 @@ except:
   fw.close()
 
   runPlotScript(buf,plotpath)
-finally:
-  fpy.close()
 
 print('Pytexplot: Done!')
