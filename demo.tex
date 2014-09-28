@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{pytexplot}
+
+\begin{document}
+\section{PyTexPlot}
+
+This is an example of the pytexplot package.
+
+After defining the directories
+\pytexplotscripts{scripts}
+\pytexplotplots{figures}
+(default is in the document folder)
+We can start including the plot:
+
+\includepytexplot[width=\linewidth]{plot1}
+
+The script that generates the plot is only ran when the image is deleted or the script has changed, 
+all of this is checked by pytexplot.py.
+
+\includepytexplot[width=\linewidth]{plot2}
+
+\end{document}
