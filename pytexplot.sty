@@ -1,0 +1,17 @@
+%
+% 2014-09-28 - By Dirk van den Bekerom
+% FOM Institute DIFFER - www.differ.nl
+%
+
+\ProvidesPackage{pytexplot}
+\RequirePackage{graphicx}
+
+\def\scriptsdir{.}
+\def\plotsdir{.}
+
+\newcommand{\pytexplotscripts}[1]{\def\scriptsdir{#1}}
+\newcommand{\pytexplotplots}[1]{\def\plotsdir{#1}}
+
+\newcommand{\includepytexplot}[2][]{
+	\immediate\write18{python pytexplot.py #2 \scriptsdir \space \plotsdir}
+  \includegraphics[#1]{\plotsdir/#2}}
