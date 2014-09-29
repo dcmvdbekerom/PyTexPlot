@@ -6,10 +6,16 @@ import binascii
 #
 # 2014-09-28 - By Dirk van den Bekerom
 # FOM Institute DIFFER - www.differ.nl
+# v1.1
 #
 
 def runPlotScript(buf,plotpath):
-  exec(buf.replace('show()','savefig("'+plotpath+'")'))
+  libname = '_mplib'
+  while (buf.find(libname) + 1):
+    libname = '_' + libname
+  exec('import matplotlib as ' + libname + '\n' + \
+       libname + '.use("' + fext + '")\n' + buf + \
+       libname + '.pyplot.savefig("' + plotpath + '")')
   
 filedir = sys.argv[2]
 plotdir = sys.argv[3]
@@ -17,10 +23,13 @@ plotdir = sys.argv[3]
 if not os.path.exists(plotdir):
   os.makedirs(plotdir)
 
-print('\nPytexplot: '+str(sys.argv[1]))
+print('\nPytexplot: ' + str(sys.argv[1]))
 print('Pytexplot: output = '+plotdir)
+
+fext = 'pdf'
+
 filepath = filedir + '\\' + sys.argv[1] + '.py'
-plotpath = plotdir + '\\' + sys.argv[1] + '.png'
+plotpath = plotdir + '\\' + sys.argv[1] + '.' + fext
 
 try:
   fr = open('pydump','rb')
