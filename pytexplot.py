@@ -14,7 +14,7 @@ def runPlotScript(buf,plotpath):
   while (buf.find(libname) + 1):
     libname = '_' + libname
   exec('import matplotlib as ' + libname + '\n' + \
-       libname + '.use("' + fext + '")\n' + buf + '\n' \
+       libname + '.use("' + fext + '")\n' + buf + '\n' + \
        libname + '.pyplot.savefig("' + plotpath + '")')
   
 filedir = sys.argv[2]
