@@ -25,7 +25,7 @@ After setting the folder where the python scripts are to be found with e.g. \pyt
 
 The file 'plot1.py' is expected to be a python script that generates a visual output using the method 'matplotlib.pyplot.show()'. This line is replaced by pytexplot.py to 'matplotlib.pyplot.savefig(path)', so that the file is saved. Note that the python script 'plot1.py' should not save images by itself!! (Though this is not a problem, the image will not be used by pytexplot)
 
-The image thus generated is stored in the folder specified in LaTeX by e.g. \pytexplotplots{figures}. The filename is the same as the python file, but with an .png extension. So in the case of 'plot1.py' it will be 'plot1.png'.
+The image thus generated is stored in the folder specified in LaTeX by e.g. \pytexplotplots{figures}. The filename is the same as the python file, but with an .pdf extension. So in the case of 'plot1.py' it will be 'plot1.pdf'.
 
 After the image is produced, LaTeX will look for an image with this name in the specified plots folder and include it, taking regard of any optional parameters given to \includegraphics{}
 
